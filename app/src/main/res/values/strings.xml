@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ScanPower</string>
+    <string name="title_activity_login"><b>LoginActivity</b></string>
+    <string name="you_don_t_have_account">You don\'t have account?<font color="#2196F3"><b> Sign Up</b></font></string>
+    <string name="already_have_account">Already have account?<font color="#2196F3"><b> Sign In</b></font></string>
+    <string name="search_asin"><font color="#AAAAAA">Search ASIN/UPC/ISBN/KEYWORD</font></string>
+    <string name="check_restrictions"><font color="#FFEC3333">?In order to automatically check restrictions,please install the ScanPowerBar extension and try again.Rextricted </font></string>
+    <string name="about_product"><font color="#FFEC3333">SteelSeries Qck Edge -  Cloth Gaming Mouse Pad - Stiched edge to prevent wear - optimized for gaming sensors - size XL</font></string>
+    <string name="subscription_start_at">Subscription start at<font color="#FFEC3333"><b> $49/mo.</b></font>
+        <br /> \n with a <b>30 day</b> free trial.</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string-array name="country">
+        <item>Marketplace</item>
+        <item>Bangkok</item>
+        <item>London</item>
+        <item>Paris</item>
+        <item>Singapore</item>
+        <item>New York</item>
+        <item>Istanbul</item>
+        <item>Dubai</item>
+        <item>Kuala Lumpur</item>
+        <item>Hong Kong</item>
+        <item>Barcelona</item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_setting_fragment">Hello Setting  fragment</string>
+    <string name="hello_Home_fragment">Hello Home  fragment</string>
+</resources>
