@@ -36,17 +36,24 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <EditText
-            android:id="@+id/etEmail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Email"
-            android:padding="10dp"
-            android:textSize="16sp">
+            app:boxBackgroundColor="#FFF"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:layout_height="match_parent">
 
-        </EditText>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textSize="16sp"  />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -86,11 +93,10 @@
             <TextView
                 android:id="@+id/tvMarketPlace"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_margin="1dp"
                 android:background="@drawable/rounded_edittext"
                 android:drawableEnd="@drawable/ic_baseline_expand_more_24"
-                android:entries="@array/country"
                 android:hint="Marketplace"
                 android:padding="10dp"
                 android:textSize="16sp" />

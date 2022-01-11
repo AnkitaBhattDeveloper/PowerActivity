@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/signup_icon"/>
+                android:src="@drawable/signup"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,96 +51,113 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <EditText
-                android:id="@+id/etName"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:background="@drawable/rounded_edittext"
-                android:hint="Name"
-                android:padding="10dp"
-                android:textSize="16sp">
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#FFF"
+                android:layout_marginTop="10dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_height="match_parent">
 
-            </EditText>
-
-            <EditText
-                android:id="@+id/etEmail"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"  />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#FFF"
+                app:boxStrokeWidth="0dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_edittext"
-                android:hint="Email"
-                android:padding="10dp"
-                android:textSize="16sp">
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_height="match_parent">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"  />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_edittext"
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#FFF"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF"
-                android:background="@drawable/rounded_edittext"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:background="@drawable/rounded_edittext"
                     android:paddingStart="10dp"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
+                android:background="@drawable/rounded_edittext"
                 app:boxBackgroundColor="#FFF"
-                android:background="@drawable/rounded_edittext">
+                app:boxStrokeColor="#FFF"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
                     android:hint="Confirm Password"
                     android:inputType="textPassword"
-                    android:background="@drawable/rounded_edittext"
                     android:paddingStart="10dp"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-           <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Spinner
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/marketPlaceSpinner"
-                android:layout_marginTop="15dp">
+                android:layout_height="wrap_content">
 
-            </Spinner>
-            <TextView
-                android:id="@+id/tvMarketPlace"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edittext"
-                android:drawableEnd="@drawable/ic_baseline_expand_more_24"
-                android:entries="@array/country"
-                android:hint="Marketplace"
-                android:padding="10dp"
-                android:layout_marginTop="15dp"
-                android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/marketPlaceSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
 
-        </FrameLayout>
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/tvMarketPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawableEnd="@drawable/ic_baseline_expand_more_24"
+                    android:entries="@array/country"
+                    android:hint="Marketplace"
+                    android:padding="10dp"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
 
 
             <LinearLayout

@@ -1,32 +1,31 @@
 package com.example.poweractivity.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
 import com.example.poweractivity.R
+import com.example.poweractivity.databinding.FragmentHomeBinding
+import java.util.jar.Manifest
+import androidx.core.app.ActivityCompat.requestPermissions
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import android.content.pm.PackageManager
+import android.location.Geocoder
+import android.util.Log
+import java.util.*
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var binding: FragmentHomeBinding
 
+    val REQUEST_CODE = 111
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -34,26 +33,75 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        if (ActivityCompat.checkSelfPermission(requireContext(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+            //&&
+//            ActivityCompat.checkSelfPermission(requireContext(),
+//                android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+        ) {
+            activity?.let {
+
+                requestPermissions(it,
+                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION,
+                        android.Manifest.permission.ACCESS_COARSE_LOCATION),REQUEST_CODE)
+
+                Log.e("TAG", "onViewCreated: ********" )
+
+
+
+            }
+
+
+        } else {
+            Log.e("tag", "permission checked")
+        }
+
+        binding.btn.setOnClickListener()
+        {
+            val city = binding.edit.text.toString()
+            val gc = Geocoder(context, Locale.getDefault())
+            val addresses = gc.getFromLocationName(city,3)
+            Log.e("tag", "onViewCreated: ${addresses}" )
+            val address = addresses.get(0)
+            Log.e("tag", "onViewCreated: ${address}" )
+            binding.text.setText(
+                    " ${address.countryCode},\n" +
+                    " ${address.countryName},\n" +
+                    " ${address.postalCode},\n" +
+                    " ${address.adminArea}")
+
+
+
+        }
+
+
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray,
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == REQUEST_CODE && grantResults[0]==PackageManager.PERMISSION_GRANTED)
+        {
+            Log.e("TAG", "onRequestPermissionsResult: ")
+        }
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }

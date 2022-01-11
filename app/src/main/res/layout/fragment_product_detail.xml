@@ -95,14 +95,14 @@
                         android:background="@drawable/rounded_button"
                         android:backgroundTint="@color/d_grey"
                         android:orientation="horizontal"
-                        android:padding="3dp">
+                        >
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/btn30Day"
                             android:layout_width="0dp"
                             android:layout_height="45dp"
                             android:layout_weight="1"
-                            android:background="@drawable/change_btn_color"
+                            android:background="@color/d_grey"
                             android:text="30"
                             android:textColor="@color/red"
                             android:textSize="17sp"
@@ -113,7 +113,7 @@
                             android:layout_width="0dp"
                             android:layout_height="45dp"
                             android:layout_weight="1"
-                            android:background="@drawable/change_btn_color"
+                            android:background="@color/d_grey"
                             android:text="180"
                             android:textColor="@color/red"
                             android:textSize="17sp"
@@ -124,7 +124,7 @@
                             android:layout_width="0dp"
                             android:layout_height="45dp"
                             android:layout_weight="1"
-                            android:background="@drawable/change_btn_color"
+                            android:background="@color/d_grey"
                             android:text="365"
                             android:textColor="@color/red"
                             android:textSize="17sp"

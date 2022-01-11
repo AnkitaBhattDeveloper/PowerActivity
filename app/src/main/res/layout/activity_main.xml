@@ -14,18 +14,13 @@
         android:orientation="horizontal"
         android:paddingTop="10dp">
 
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:src="@drawable/scanlogo" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableRight="@drawable/ic_baseline_search_24"
             android:gravity="center|center_vertical"
             android:hint="@string/search_asin"
-            android:textSize="15sp" />
+            android:textSize="17sp" />
     </LinearLayout>
 
     <View
@@ -51,12 +46,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/divider"
+        android:background="#FFFFFF"
         android:paddingBottom="70dp">
 
     </FrameLayout>
-
-
-
 
 
     <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView
@@ -64,8 +57,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/light_grey"
-        app:menu="@menu/menu_bottom_navigation">
+        app:backgroundTint="@color/white"
+        app:menu="@menu/menu_bottom_navigation"
+        app:morphCornerRadius="128dp"
+        app:morphItemRadius="64dp"
+        app:morphVerticalOffset="10dp">
 
     </com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView>
 

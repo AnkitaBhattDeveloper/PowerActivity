@@ -11,17 +11,16 @@
     <!-- Strings used for fragments for navigation -->
 
     <string-array name="country">
-        <item>Marketplace</item>
-        <item>Bangkok</item>
-        <item>London</item>
-        <item>Paris</item>
-        <item>Singapore</item>
-        <item>New York</item>
-        <item>Istanbul</item>
-        <item>Dubai</item>
-        <item>Kuala Lumpur</item>
-        <item>Hong Kong</item>
-        <item>Barcelona</item>
+        <item>US</item>
+        <item>UK</item>
+        <item>IT</item>
+        <item>DE</item>
+        <item>ES</item>
+        <item>FR</item>
+        <item>CA</item>
+        <item>AU</item>
+        <item>MX</item>
+
 
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
