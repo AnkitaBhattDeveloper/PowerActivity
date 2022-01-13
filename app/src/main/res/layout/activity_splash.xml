@@ -7,7 +7,7 @@
     tools:context=".activities.SplashActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/bgicon">
+    android:background="@drawable/dotted_bg">
 
 
   <LinearLayout
@@ -17,9 +17,9 @@
       android:layout_height="wrap_content">
 
       <ImageView
-          android:layout_width="60dp"
-          android:src="@drawable/scanlogo"
-          android:layout_height="60dp">
+          android:layout_width="120dp"
+          android:src="@drawable/logo_icon"
+          android:layout_height="120dp">
 
       </ImageView>
 

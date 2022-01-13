@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ScanPower</string>
+    <string name="app_name">Syncritrage</string>
     <string name="title_activity_login"><b>LoginActivity</b></string>
     <string name="you_don_t_have_account">You don\'t have account?<font color="#2196F3"><b> Sign Up</b></font></string>
     <string name="already_have_account">Already have account?<font color="#2196F3"><b> Sign In</b></font></string>

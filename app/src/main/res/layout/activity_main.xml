@@ -13,14 +13,27 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="10dp">
+<!--        android:drawableRight="@drawable/ic_baseline_search_24"-->
 
-        <TextView
-            android:layout_width="match_parent"
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
             android:layout_height="match_parent"
-            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:background="@android:color/transparent"
             android:gravity="center|center_vertical"
             android:hint="@string/search_asin"
             android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_gravity="end"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_search_24"
+            android:gravity="center|center_vertical"/>
+
     </LinearLayout>
 
     <View

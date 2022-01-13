@@ -1,7 +1,10 @@
 package com.example.poweractivity.activities
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -19,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var context: Context
     private lateinit var bottomNavigationView: BottomNavigationView
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         context = this
         supportActionBar!!.hide()
         replaceFragment(HomeFragment.newInstance("", ""))
+
+        //binding.bottomNavigationView.menu.getItem(2).isEnabled = false
+
         binding.bottomNavigationView.menu.getItem(2).isChecked = true
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
 
@@ -53,8 +60,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-    }
+        binding.ivSearch.setOnClickListener()
+        {
+            Toast.makeText(context, "search bar clicked ", Toast.LENGTH_SHORT).show()
+        }
 
+
+    }
 
 
     private fun replaceFragment(f: Fragment) {
@@ -63,7 +75,6 @@ class MainActivity : AppCompatActivity() {
         ft.replace(R.id.mainFrame, f)
         ft.commit()
     }
-
 
 }
 
