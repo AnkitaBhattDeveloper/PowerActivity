@@ -97,10 +97,10 @@ class HomeFragment : Fragment() {
         }
 
 
-        val animation: Animation =
+        /*val animation: Animation =
             AnimationUtils.loadAnimation(requireContext(), R.anim.aaaa)
         binding.ivAnime.startAnimation(animation)
-
+*/
 
     }
 

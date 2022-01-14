@@ -1,6 +1,7 @@
 package com.example.poweractivity.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +34,7 @@ class ProductDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.e("TAG", "onViewCreated:  runnnnnnnnnnnnnnnnn" )
         b30Days = binding.btn30Day
         b180Days = binding.btn180Day
         b365Days = binding.btn365Day
