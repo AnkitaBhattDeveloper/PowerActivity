@@ -15,13 +15,14 @@ import com.example.syncritrage.adapter.CategoryAdapter
 import com.example.syncritrage.adapter.SliderAdapter
 import com.example.syncritrage.data.SliderItem
 import com.example.poweractivity.databinding.FragmentHomeBinding
+import com.example.syncritrage.adapter.TrendingAdapter
 import java.util.*
 
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     var catName: ArrayList<String> = arrayListOf()
-    var image: ArrayList<SliderItem> = arrayListOf()
+    var trendPName: ArrayList<String> = arrayListOf()
 
 
     // private var s: String? = "null"
@@ -101,6 +102,17 @@ class HomeFragment : Fragment() {
 
         binding.imageSlider.setSliderAdapter(sliderAdapter)
 
+         val trendingAdapter = TrendingAdapter(requireContext(),trendPName)
+        val tLManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        binding.rvTrending.apply { 
+            adapter = trendingAdapter
+            layoutManager = tLManager
+            hasFixedSize()
+        }
+
+        
+        
+        
 
     }
 
