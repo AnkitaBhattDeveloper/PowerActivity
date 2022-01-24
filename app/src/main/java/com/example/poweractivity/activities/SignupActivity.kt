@@ -1,32 +1,28 @@
 package com.example.poweractivity.activities
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poweractivity.R
-import com.example.poweractivity.SignupApi
 import com.example.poweractivity.adapter.MyAdapter
-import com.example.poweractivity.data.PriceItemModel
+import com.example.poweractivity.data.SignupModel
 import com.example.poweractivity.data.SpinnerModel
 import com.example.poweractivity.databinding.ActivitySignupBinding
-import okhttp3.ResponseBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
+import com.ftechiz.githubuserapp.utils.App
+
 
 class SignupActivity : AppCompatActivity() {
-    val url: String = "http://192.168.1.4:8282/Scanpower/"
 
     private lateinit var binding: ActivitySignupBinding
     lateinit var context: Context
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
@@ -39,7 +35,10 @@ class SignupActivity : AppCompatActivity() {
         {
             binding.marketPlaceSpinner.performClick()
         }
-
+       /* var progressDailog = ProgressDialog(context)
+        progressDailog.setTitle("Signing Up")
+        progressDailog.setMessage("Your Account is Creating please wait")
+*/
 
         val modelList: ArrayList<SpinnerModel> = arrayListOf()
         modelList.add(SpinnerModel("US", R.drawable.us))
@@ -71,22 +70,52 @@ class SignupActivity : AppCompatActivity() {
 
             }
 
-       val retrofit = Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create())
-            .build().create(SignupApi::class.java)
 
-        val retrofitData = retrofit.signupData()
-       retrofitData.enqueue(object : Callback<ResponseBody?> {
-           override fun onResponse(call: Call<ResponseBody?>, response: Response<ResponseBody?>) {
-               TODO("Not yet implemented")
-           }
+        val repo = (application as App).appRepository
 
-           override fun onFailure(call: Call<ResponseBody?>, t: Throwable) {
-               TODO("Not yet implemented")
-           }
-       })
+        binding.bSignup.setOnClickListener() {
+            val name = binding.userName.text.toString()
+            if (name.isNullOrEmpty()) {
+                binding.userName.setError("Enter Username!")
+                // return@setOnClickListener
+            }
+            val email = binding.userEmail.text.toString()
+            if (email.isNullOrEmpty()) {
+                binding.userEmail.setError("Enter Email!")
+                return@setOnClickListener
+            }
+            val password = binding.etPassword.text.toString()
+            if (password.isNullOrEmpty()) {
+                binding.etPassword.error = "Enter Password!"
+                return@setOnClickListener
+            }
+            val confirmPassword = binding.etConfirmPassword.text.toString()
+            if (!confirmPassword.equals(password)) {
+                binding.etConfirmPassword.error = "Re-type your password"
+                return@setOnClickListener
+            }
+            val marketplace = binding.tvMarketPlace.text.toString()
+            if (marketplace.isNullOrEmpty()) {
+                binding.tvMarketPlace.error = "Enter MarketPlace!"
+                return@setOnClickListener
+            }
+            val roles = "ROLE_USER"
+            val body = SignupModel(name, email, password, roles)
+            //progressDailog.show()
 
+            Log.e("TAG",
+                "Signup Activity --- ${body.username},${body.email},${body.password},${body.roles}")
 
+            repo.createUser(body)
 
+        }
+
+        repo.signUpResponse.observe(this, {
+            with(it) {
+                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        })
 
         /*// Create an ArrayAdapter
         val spinnerAdapter = ArrayAdapter.createFromResource(this,

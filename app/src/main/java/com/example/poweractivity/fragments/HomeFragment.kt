@@ -7,21 +7,24 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.widget.Toast
+import android.widget.LinearLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.requestPermissions
 import androidx.fragment.app.Fragment
-import com.example.poweractivity.R
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.poweractivity.adapter.CategoryAdapter
 import com.example.poweractivity.databinding.FragmentHomeBinding
 import java.util.*
 
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
+    var catName: ArrayList<String> = arrayListOf()
 
-    private var s: String? = "null"
+
+    // private var s: String? = "null"
     val REQUEST_CODE = 111
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,19 +40,6 @@ class HomeFragment : Fragment() {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-
-//        binding.etPin.text = s
-        if (savedInstanceState != null) {
-            Log.e("TAG", "onCreateView: " + savedInstanceState.get("val"))
-            s = savedInstanceState.get("val").toString()
-            Toast.makeText(context, s, Toast.LENGTH_LONG).show()
-            //   binding.etPin.setText("ffffff"+s)
-            Log.e("TAG", "onCreateView: $s")
-            binding.etPin.setText(s)
-        }
-//        if (s != null)
-//            binding.etPin.text = s
-
         return binding.root
 
     }
@@ -64,15 +54,10 @@ class HomeFragment : Fragment() {
                 android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
         ) {
             activity?.let {
-
                 requestPermissions(it,
                     arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION,
                         android.Manifest.permission.ACCESS_COARSE_LOCATION), REQUEST_CODE)
-
-                Log.e("TAG", "onViewCreated: ********")
-
             }
-
 
         } else {
             Log.e("tag", "permission checked")
@@ -86,38 +71,25 @@ class HomeFragment : Fragment() {
             Log.e("tag", "onViewCreated: ${addresses}")
             val address = addresses.get(0)
             Log.e("tag", "onViewCreated: ${address}")
-            binding.etPin.setText(
-                //                    " ${address.countryCode},\n" +
-                //                    " ${address.countryName},\n" +
-                " ${address.postalCode}," +
-                        //                    " ${address.adminArea},\n"+
-                        " ${address.subAdminArea}")
-
+            binding.etPin.setText(" ${address.postalCode}," + " " + " ${address.subAdminArea}")
 
         }
 
-
-        /*val animation: Animation =
-            AnimationUtils.loadAnimation(requireContext(), R.anim.aaaa)
-        binding.ivAnime.startAnimation(animation)
-*/
-
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-
-        if (savedInstanceState != null) {
-            Log.e("TAG", "onCreateView: " + savedInstanceState.get("val"))
-            binding.etPin.setText("dsfsgfhcdghg")
-
-            s = savedInstanceState.get("val").toString()
-            Toast.makeText(context, s, Toast.LENGTH_LONG).show()
-            //   binding.etPin.setText("ffffff"+s)
-            Log.e("TAG", "onCreateView: $s")
-
+        val categoryAdapter = CategoryAdapter(requireContext(), catName)
+        val lManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        binding.rvCategory.apply {
+            adapter = categoryAdapter
+            layoutManager = lManager
+            hasFixedSize()
         }
+
+        catName.add("Mobiles")
+        catName.add("Fashion")
+        catName.add("Grocery")
+        catName.add("Electronics")
+        catName.add("Furniture")
+        catName.add("Home")
+        catName.add("Appliances")
 
 
     }
@@ -142,8 +114,4 @@ class HomeFragment : Fragment() {
     }
 
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString("val", binding.etPin.text.toString())
-    }
 }

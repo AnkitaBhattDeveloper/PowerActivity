@@ -76,6 +76,11 @@ class MainActivity : AppCompatActivity() {
         ft.commit()
     }
 
+    override fun onBackPressed() {
+        finish()
+    }
+
+
 }
 
 

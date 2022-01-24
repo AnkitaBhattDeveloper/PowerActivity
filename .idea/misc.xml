@@ -21,6 +21,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.278125" />
         <entry key="app/src/main/res/drawable/ic_launcher_scanlogo_background.xml" value="0.278125" />
         <entry key="app/src/main/res/drawable/ic_launcher_scanpowerlogo_foreground.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.24814814814814815" />
         <entry key="app/src/main/res/drawable/linear_border.xml" value="0.278125" />
         <entry key="app/src/main/res/drawable/radius.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/drawable/round_bg.xml" value="0.27384615384615385" />
@@ -28,15 +29,18 @@
         <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.1824074074074074" />
         <entry key="app/src/main/res/drawable/search_view.xml" value="0.278125" />
         <entry key="app/src/main/res/drawable/visibility_.xml" value="0.27384615384615385" />
+        <entry key="app/src/main/res/layout/activity_electronic.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/activity_view_category.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/category_item_list.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/custom_spinner_item.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/layout/fragment_buy.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_graph.xml" value="0.14629629629629629" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14629629629629629" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_product_detail.xml" value="0.14629629629629629" />
         <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.13518518518518519" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.26197916666666665" />
