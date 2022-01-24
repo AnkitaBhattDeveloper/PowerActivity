@@ -16,10 +16,10 @@
         android:theme="@style/Theme.PowerActivity"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.ViewCategoryActivity"
+            android:name="com.example.syncritrage.activities.ViewCategoryActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.example.syncritrage.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,19 +27,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SignupActivity"
+            android:name="com.example.syncritrage.activities.SignupActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
+            android:name="com.example.syncritrage.activities.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.PowerActivity.NoActionBar">
 
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.example.syncritrage.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true">
 
