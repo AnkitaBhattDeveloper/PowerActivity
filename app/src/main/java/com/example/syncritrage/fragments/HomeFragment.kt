@@ -11,11 +11,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.requestPermissions
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.poweractivity.databinding.FragmentHomeBinding
 import com.example.syncritrage.adapter.CategoryAdapter
 import com.example.syncritrage.adapter.SliderAdapter
-import com.example.syncritrage.data.SliderItem
-import com.example.poweractivity.databinding.FragmentHomeBinding
 import com.example.syncritrage.adapter.TrendingAdapter
+import com.example.syncritrage.data.SliderItem
 import java.util.*
 
 
@@ -96,23 +96,28 @@ class HomeFragment : Fragment() {
 
         // val sliderView: SliderView = findViewById(R.id.imageSlider)
         val sliderAdapter = SliderAdapter(requireContext())
-        sliderAdapter.addItem(SliderItem("",""))
-        sliderAdapter.addItem(SliderItem("",""))
-        sliderAdapter.addItem(SliderItem("",""))
+        sliderAdapter.addItem(SliderItem("", ""))
+        sliderAdapter.addItem(SliderItem("", ""))
+        sliderAdapter.addItem(SliderItem("", ""))
 
         binding.imageSlider.setSliderAdapter(sliderAdapter)
 
-         val trendingAdapter = TrendingAdapter(requireContext(),trendPName)
-        val tLManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-        binding.rvTrending.apply { 
+        val trendingAdapter = TrendingAdapter(requireContext(), trendPName)
+        val tLManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvTrending.apply {
             adapter = trendingAdapter
             layoutManager = tLManager
             hasFixedSize()
         }
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
+        trendPName.add("jdfhfhh")
 
-        
-        
-        
 
     }
 

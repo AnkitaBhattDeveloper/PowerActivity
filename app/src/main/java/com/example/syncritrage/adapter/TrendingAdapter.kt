@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.poweractivity.R
 import com.example.poweractivity.databinding.CategoryItemListBinding
 import com.example.poweractivity.databinding.RvTrendingItemsBinding
 
@@ -18,6 +19,7 @@ class TrendingAdapter(val context: Context,val trendItemList:ArrayList<String>):
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       holder.binding.tvProductName.text = trendItemList[position]
+        holder.binding.ivTrendImage.setImageResource(R.drawable.homefurniture)
     }
 
     override fun getItemCount(): Int {
