@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Syncritrage</string>
     <string name="title_activity_login"><b>LoginActivity</b></string>
-    <string name="you_don_t_have_account">You don\'t have account?<font color="#2196F3"><b> Sign Up</b></font></string>
-    <string name="already_have_account">Already have account?<font color="#2196F3"><b> Sign In</b></font></string>
+    <string name="you_don_t_have_account">You don\'t have account?</string>
+    <string name="already_have_account">Already have account?</string>
     <string name="search_asin"><font color="#AAAAAA">Search ASIN/UPC/ISBN/KEYWORD</font></string>
     <string name="check_restrictions"><font color="#FFEC3333">?In order to automatically check restrictions,please install the ScanPowerBar extension and try again.Rextricted </font></string>
     <string name="about_product"><font color="#FFEC3333">SteelSeries Qck Edge -  Cloth Gaming Mouse Pad - Stiched edge to prevent wear - optimized for gaming sensors - size XL</font></string>
@@ -26,4 +26,29 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_setting_fragment">Hello Setting  fragment</string>
     <string name="hello_Home_fragment">Hello Home  fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="decription">description bvfdg bfhbd fjhgdg fdghfgfg fgkjfgfjgf fjgkfgfgfjhg </string>
+    <string-array name="search">
+        <item>Grocery</item>
+        <item>MobilePhones</item>
+        <item>Electronics</item>
+        <item>Fashion</item>
+        <item>Pets</item>
+        <item>Home</item>
+        <item>Furniture</item>
+        <item>Beauty</item>
+        <item>PersonalCare</item>
+        <item>Kids</item>
+        <item>Appliances</item>
+        <item>Patio and Garden</item>
+        <item>Camping Gear</item>
+        <item>Auto</item>
+        <item>Toys</item>
+        <item>Books</item>
+        <item>Tv and Movies</item>
+        <item>Computers</item>
+        <item>Sports</item>
+        <item>Arts and Crafts</item>
+    </string-array>
 </resources>

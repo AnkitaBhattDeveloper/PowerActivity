@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,11 +8,490 @@
 
 
     <LinearLayout
+        android:id="@+id/detailLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/allerta"
+                    android:text="Product Name"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/placeholder" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/Days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:padding="2dp"
+
+                        android:text="Days"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/d_grey"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn30Day"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@color/d_grey"
+                            android:text="30"
+                            android:textColor="@color/red"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn180Day"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@color/d_grey"
+                            android:text="180"
+                            android:textColor="@color/red"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn365Day"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@color/d_grey"
+                            android:text="365"
+                            android:textColor="@color/red"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Avg Rank"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:paddingEnd="10dp"
+                            android:text="Avg Price"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="6666"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_bg"
+                            android:backgroundTint="@color/light_blue"
+                            android:gravity="center_horizontal"
+                            android:paddingStart="15dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="6dp"
+                            android:text="$ 678"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                 <!--<LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/linear_border"
+                     android:orientation="horizontal">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_weight="0.6"
+                         android:background="@color/grey"
+                         android:orientation="vertical"
+                         android:paddingStart="10dp"
+                         android:paddingEnd="10dp">
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="ASIN" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Dept" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Brand" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Dimensions" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Weight" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Offers" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Reviews" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Size Tier" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Size" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             style="@style/TextViewStyleBold"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Pkg Qty" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center_horizontal"
+                         android:layout_weight="1"
+                         android:orientation="vertical"
+                         android:paddingStart="10dp">
+
+                         <TextView
+                             android:id="@+id/tvAsin"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="B07JPZTHYT" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvDept"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Personal Computer" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvBrand"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="SteelSeries" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvDimension"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="12.36 x 2.76 x 2.52 " />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvWeight"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="0.93 lbs" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvOffers"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="12" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvReviews"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="710" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvSizeTier"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Large Standard-Size" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvSize"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="XL" />
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:background="@color/d_grey" />
+
+                         <TextView
+                             android:id="@+id/tvPkgQty"
+                             style="@style/TextViewStyleNormal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="1" />
+
+                     </LinearLayout>
+
+                 </LinearLayout>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProductDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/check_restrictions" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    -->
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,6 +515,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/productImage"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:scaleType="center"
@@ -201,270 +681,15 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:elevation="5dp"
-            app:cardCornerRadius="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/linear_border"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.6"
-                        android:background="@color/grey"
-                        android:orientation="vertical"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp">
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ASIN" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dept" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Brand" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dimensions" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Weight" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Offers" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Reviews" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Size Tier" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Size" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleBold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pkg Qty" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:paddingStart="10dp">
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="B07JPZTHYT" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Personal Computer" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="SteelSeries" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="12.36 x 2.76 x 2.52 " />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="0.93 lbs" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="12" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="710" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Large Standard-Size" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="XL" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/d_grey" />
-
-                        <TextView
-                            style="@style/TextViewStyleNormal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="@string/check_restrictions" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            android:gravity="center">
 
 
-</ScrollView>
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>-->
+
+
+</androidx.core.widget.NestedScrollView>

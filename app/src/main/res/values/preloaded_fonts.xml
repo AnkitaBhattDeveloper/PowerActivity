@@ -3,7 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aldrich</item>
         <item>@font/allerta</item>
-        <item>@font/andika</item>
+        <item>@font/allura</item>
+        <item>@font/artifika</item>
 
     </array>
 </resources>

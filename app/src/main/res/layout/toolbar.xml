@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:padding="3dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/toolbar_back"
+                android:layout_margin="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="toolbar"
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                app:titleTextColor="@color/white"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/toolbar_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_toolbar_search_24"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/toolbar_cart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24"/>
+-->
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>

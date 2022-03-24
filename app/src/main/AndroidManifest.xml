@@ -1,25 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.poweractivity">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.ftechiz.githubuserapp.utils.App"
+        android:name=".Utils.App"
         android:allowBackup="true"
         android:icon="@drawable/logo_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.PowerActivity"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"><!--
         <activity
-            android:name="com.example.syncritrage.activities.ViewCategoryActivity"
+            android:name="com.example.poweractivity.activities.ProductDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true" />
         <activity
-            android:name="com.example.syncritrage.activities.SplashActivity"
+            android:name="com.example.poweractivity.activities.ViewCategoryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PowerActivity.NoActionBar" />-->
+        <activity
+            android:name="com.example.poweractivity.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,27 +34,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.syncritrage.activities.SignupActivity"
-            android:exported="true">
-
-        </activity>
+            android:name="com.example.poweractivity.activities.SignupActivity"
+            android:exported="true" />
         <activity
-            android:name="com.example.syncritrage.activities.LoginActivity"
+            android:name="com.example.poweractivity.activities.ProductsActivity"
+            android:theme="@style/Theme.PowerActivity.NoActionBar"
+            android:exported="true" />
+        <activity
+            android:name="com.example.poweractivity.activities.ItemDetailActivity"
+            android:theme="@style/Theme.PowerActivity.NoActionBar"
+            android:exported="true" />
+        <activity
+            android:name="com.example.poweractivity.activities.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.PowerActivity.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.PowerActivity.NoActionBar" />
         <activity
-            android:name="com.example.syncritrage.activities.MainActivity"
+            android:name="com.example.poweractivity.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

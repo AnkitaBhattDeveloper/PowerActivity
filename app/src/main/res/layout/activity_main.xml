@@ -5,36 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/grey"
     tools:context=".activities.MainActivity">
-
     <LinearLayout
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/pink"
         android:paddingTop="10dp">
 <!--        android:drawableRight="@drawable/ic_baseline_search_24"-->
-
         <EditText
+            android:id="@+id/etSearchAsin"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/black"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:gravity="center|center_vertical"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
             android:hint="@string/search_asin"
-            android:textSize="17sp" />
+            android:textSize="12sp">
+        </EditText>
+
 
         <ImageView
             android:id="@+id/ivSearch"
             android:layout_width="0dp"
             android:layout_weight="0.1"
             android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_search_24"
             android:gravity="center|center_vertical"/>
 
     </LinearLayout>
+        <TextView
+            android:id="@+id/tvpincode"
+            android:padding="10dp"
+            android:background="@drawable/pin_bg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
 
     <View
         android:id="@+id/divider"
@@ -43,27 +64,17 @@
         android:layout_below="@id/searchBar"
         android:background="@color/grey" />
 
-<!--
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/mainViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/divider"
-        android:layout_marginTop="-1dp"
-        android:paddingBottom="70dp" />
--->
 
     <FrameLayout
         android:id="@+id/mainFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/divider"
-        android:background="#FFFFFF"
-        android:paddingBottom="70dp">
+        android:layout_below="@id/divider">
+
 
     </FrameLayout>
 
+<!--
 
     <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -77,6 +88,7 @@
         app:morphVerticalOffset="10dp">
 
     </com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView>
+-->
 
 
     <!--  <androidx.coordinatorlayout.widget.CoordinatorLayout

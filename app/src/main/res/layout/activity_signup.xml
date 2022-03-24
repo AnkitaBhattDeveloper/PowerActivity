@@ -62,7 +62,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/userName"
+                    android:id="@+id/userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_edittext"
@@ -82,7 +82,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                  android:id="@+id/userEmail"
+                    android:id="@+id/userEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_edittext"
@@ -179,18 +179,39 @@
 
                 </androidx.appcompat.widget.AppCompatButton>
 
-                <TextView
-                    android:id="@+id/textSignIn"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/signUpButt2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
-                    android:padding="4sp"
-                    android:text="@string/already_have_account"
-                    android:textColor="@color/black"
-                    android:textSize="15sp">
+                    android:layout_marginTop="10dp">
 
-                </TextView>
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/already_have_account"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/signInButt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView"
+                        android:background="@android:color/transparent"
+                        android:text="Sign up"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

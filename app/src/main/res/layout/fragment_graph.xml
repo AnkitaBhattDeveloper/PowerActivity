@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.GraphFragment">
 
     <LinearLayout
@@ -11,17 +11,90 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/about_product"
-    android:padding="8dp"/>
+        <TextView
+            android:id="@+id/tvProdcutGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/about_product" />
+
+        <LinearLayout
+            android:id="@+id/Days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:padding="2dp"
+
+                android:text="Days"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/d_grey"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn30Day"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@color/d_grey"
+                    android:text="30"
+                    android:textColor="@color/red"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn180Day"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@color/d_grey"
+                    android:text="180"
+                    android:textColor="@color/red"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn365Day"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@color/d_grey"
+                    android:text="365"
+                    android:textColor="@color/red"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
         <androidx.cardview.widget.CardView
-            app:cardCornerRadius="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:elevation="5dp">
+            android:elevation="5dp"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,7 +123,7 @@
                         android:gravity="center"
                         android:text="Offers"
                         android:textColor="@color/black"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -59,7 +132,7 @@
                         android:gravity="center"
                         android:text="New"
                         android:textColor="@color/black"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -68,15 +141,16 @@
                         android:gravity="center"
                         android:text="Used"
                         android:textColor="@color/black"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/ivGraph"
                     android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:scaleType="fitXY"
+                    android:layout_height="300dp"
+                    android:padding="10dp"
                     android:src="@drawable/placeholder" />
 
             </LinearLayout>
