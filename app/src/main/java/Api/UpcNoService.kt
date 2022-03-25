@@ -1,8 +1,7 @@
 package Api
 
-import com.example.poweractivity.Upc.Product
-import com.example.poweractivity.Upc.UpcModel
-import com.example.poweractivity.data.RapidModel
+import com.example.ScanPower.Upc.UpcModel
+import com.example.ScanPower.data.RapidModel
 
 import retrofit2.Call
 import retrofit2.http.*

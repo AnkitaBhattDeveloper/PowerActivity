@@ -1,9 +1,9 @@
 package Api
 
-import com.example.poweractivity.data.SigninModel
-import com.example.poweractivity.data.SigninResponse
-import com.example.poweractivity.data.SignupModel
-import com.example.poweractivity.data.SignupResponse
+import com.example.ScanPower.data.SigninModel
+import com.example.ScanPower.data.SigninResponse
+import com.example.ScanPower.data.SignupModel
+import com.example.ScanPower.data.SignupResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
