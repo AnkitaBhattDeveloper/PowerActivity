@@ -1,7 +1,6 @@
 package Api
 
-import com.example.poweractivity.data.SearchResponse
-import com.example.poweractivity.data.StoreIDResponse
+import com.example.ScanPower.data.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

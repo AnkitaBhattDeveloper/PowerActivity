@@ -1,6 +1,6 @@
 package Api
 
-import com.example.poweractivity.Utils.App
+import com.example.ScanPower.Utils.App
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
